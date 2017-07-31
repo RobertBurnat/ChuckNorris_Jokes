@@ -1,19 +1,15 @@
 //   CODE IN JQUERY //
 
 $(function() {
-var url = 'http://api.icndb.com/jokes/random';
-var $button = $('#get-joke');
-var $paragraph = $('#joke');
-$button.click(function() {
-	getJoke();
-});
+let url = 'http://api.icndb.com/jokes/random';
+let $button = $('#get-joke');
+let $paragraph = $('#joke');
+$button.click( () => getJoke());
 function getJoke() {
 	$.ajax({
 		method: 'GET',
 		url: url,
-		success: function(res) {
-			$paragraph.text(res.value.joke);
-		}
+		success: (res) => $paragraph.text(res.value.joke)
 	});
 }
 getJoke();
@@ -22,17 +18,17 @@ getJoke();
 // CODE IN JS //
 
 // document.addEventListener("DOMContentLoaded", function() {
-// 	var url = 'http://api.icndb.com/jokes/random';
-// 	var button = document.getElementById('get-joke');
-// 	var paragraph = document.getElementById('joke');
-// 	button.addEventListener('click', function() {
+// 	let url = 'http://api.icndb.com/jokes/random';
+// 	let button = document.getElementById('get-joke');
+// 	let paragraph = document.getElementById('joke');
+// 	button.addEventListener('click', () => {
 // 		getJoke();
 // 	});
 // 	function getJoke() {
-// 		var xhr = new XMLHttpRequest();
+// 		let xhr = new XMLHttpRequest();
 // 		xhr.open('GET', url);
-// 		xhr.addEventListener('load', function() {
-// 			var response = JSON.parse(xhr.response);
+// 		xhr.addEventListener('load', () => {
+// 			let response = JSON.parse(xhr.response);
 // 			paragraph.innerHTML = response.value.joke;
 // 		});
 // 		xhr.send();
