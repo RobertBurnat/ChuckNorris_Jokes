@@ -1,6 +1,6 @@
 //   CODE IN JQUERY //
 
-$(function() {
+$(() => {
 let url = 'http://api.icndb.com/jokes/random';
 let $button = $('#get-joke');
 let $paragraph = $('#joke');
@@ -17,13 +17,11 @@ getJoke();
 
 // CODE IN JS //
 
-// document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", () => {
 // 	let url = 'http://api.icndb.com/jokes/random';
 // 	let button = document.getElementById('get-joke');
 // 	let paragraph = document.getElementById('joke');
-// 	button.addEventListener('click', () => {
-// 		getJoke();
-// 	});
+// 	button.addEventListener('click', () => getJoke());
 // 	function getJoke() {
 // 		let xhr = new XMLHttpRequest();
 // 		xhr.open('GET', url);
